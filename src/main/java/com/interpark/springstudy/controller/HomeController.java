@@ -66,7 +66,7 @@ public class HomeController {
 		return "home2";
 	}
 	
-	@RequestMapping(value = "/data/dbtest", method = RequestMethod.GET)
+	@RequestMapping(value = "/dbtest", method = RequestMethod.GET)
 	public String dbtest(Model model) throws SQLException {
 		
 		model.addAttribute("name", homeSc.test());
