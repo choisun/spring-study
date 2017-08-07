@@ -1,4 +1,4 @@
-package com.interpark.springstudy.di3;
+package com.interpark.springstudy.di.step6;
 
 public class KoreaTire implements Tire{
 

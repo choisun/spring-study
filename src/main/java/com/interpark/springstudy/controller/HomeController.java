@@ -9,12 +9,15 @@ import org.json.simple.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.FileSystemXmlApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.interpark.springstudy.di.step6.Car;
 import com.interpark.springstudy.dto.TestDto;
 import com.interpark.springstudy.service.HomeService;
 
@@ -59,7 +62,7 @@ public class HomeController {
 		return "home2";
 	}
 	
-	@RequestMapping(value = "/data/{name}", method = RequestMethod.GET)
+	@RequestMapping(value = "/data/path/{name}", method = RequestMethod.GET)
 	public String pathValue(@PathVariable String name, Model model) {
 		
 		model.addAttribute("name", name);
@@ -70,6 +73,17 @@ public class HomeController {
 	public String dbtest(Model model) throws SQLException {
 		
 		model.addAttribute("name", homeSc.test());
+		return "home2";
+	}
+	
+	@RequestMapping(value = "/ditest", method = RequestMethod.GET)
+	public String diTest(@PathVariable String name, Model model) {
+		System.out.println("-------------------");
+		ApplicationContext context = new FileSystemXmlApplicationContext("classpath:spring/spring-di3.xml");
+
+		Car car = (Car)context.getBean("car");
+		
+		model.addAttribute("name", car.getTireBrand());
 		return "home2";
 	}
 }

@@ -1,4 +1,4 @@
-package com.interpark.springstudy.di3;
+package com.interpark.springstudy.di.step5;
 
 public class Car {
 	Tire tire;

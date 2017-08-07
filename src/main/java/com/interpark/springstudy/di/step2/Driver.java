@@ -1,4 +1,4 @@
-package com.interpark.springstudy.di2;
+package com.interpark.springstudy.di.step2;
 
 public class Driver {
 

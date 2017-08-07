@@ -1,4 +1,4 @@
-package com.interpark.springstudy.di1;
+package com.interpark.springstudy.di.step3;
 
 public class AmericaTire implements Tire{
 
