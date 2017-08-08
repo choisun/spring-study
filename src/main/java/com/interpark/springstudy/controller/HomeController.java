@@ -77,7 +77,7 @@ public class HomeController {
 	}
 	
 	@RequestMapping(value = "/ditest", method = RequestMethod.GET)
-	public String diTest(@PathVariable String name, Model model) {
+	public String diTest(Model model) {
 		System.out.println("-------------------");
 		ApplicationContext context = new FileSystemXmlApplicationContext("classpath:spring/spring-di3.xml");
 
