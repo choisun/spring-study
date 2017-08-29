@@ -79,7 +79,7 @@ public class HomeController {
 	@RequestMapping(value = "/ditest", method = RequestMethod.GET)
 	public String diTest(Model model) {
 		System.out.println("-------------------");
-		ApplicationContext context = new FileSystemXmlApplicationContext("classpath:spring/spring-di3.xml");
+		ApplicationContext context = new FileSystemXmlApplicationContext("classpath:spring/di/spring-di3.xml");
 
 		Car car = (Car)context.getBean("car");
 		

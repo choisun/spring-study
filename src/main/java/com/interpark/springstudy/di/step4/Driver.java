@@ -7,7 +7,7 @@ public class Driver {
 
 	// xml 파일을 사용하여 속성 주입
 	public static void main(String[] args) {
-		ApplicationContext context = new FileSystemXmlApplicationContext("classpath:spring/spring-di.xml");
+		ApplicationContext context = new FileSystemXmlApplicationContext("classpath:spring/di/spring-di.xml");
 		Tire tire = (Tire)context.getBean("tire");
 		Car car = (Car)context.getBean("car");
 		

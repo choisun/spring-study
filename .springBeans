@@ -8,8 +8,8 @@
 	<enableImports><![CDATA[true]]></enableImports>
 	<configs>
 		<config>src/main/webapp/WEB-INF/spring/context-datasource.xml</config>
-		<config>src/main/resources/spring/spring-di.xml</config>
-		<config>src/main/resources/spring/spring-aop.xml</config>
+		<config>src/main/resources/spring/di/spring-di.xml</config>
+		<config>src/main/resources/spring/aop/spring-aop.xml</config>
 	</configs>
 	<autoconfigs>
 		<config>src/main/webapp/WEB-INF/spring/context-spring.xml</config>
