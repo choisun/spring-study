@@ -23,6 +23,6 @@ public class MyAspect {
 	
 //	@Around("execution(* housework())")
 //	public void around(ProceedingJoinPoint joinPoint) throws Throwable {
-//		System.out.println("aaa");
+//		System.out.println("청소를 한다.");
 //	}
 }
